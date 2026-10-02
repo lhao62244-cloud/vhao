@@ -1,0 +1,94 @@
+from pathlib import Path
+
+html = """<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESP Toggle</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#111;color:#fff;display:flex;justify-content:center;align-items:center;min-height:100vh}
+.box{width:min(90%,360px);background:#1d1d1d;border:1px solid #333;border-radius:18px;padding:24px;box-sizing:border-box}
+.row{display:flex;align-items:center;justify-content:space-between;gap:20px}
+h2{margin:0 0 6px;font-size:22px}
+p{margin:0;color:#aaa;font-size:14px}
+button{border:0;border-radius:12px;padding:13px 20px;font-weight:bold;font-size:15px;cursor:pointer;background:#333;color:#fff}
+button.on{background:#18a558}
+.status{margin-top:18px;background:#151515;border-radius:10px;padding:12px;color:#aaa;text-align:center}
+</style>
+</head>
+<body>
+<div class="box">
+  <div class="row">
+    <div>
+      <h2>ESP</h2>
+      <p>ESP Free Fire.</p>
+    </div>
+    <button id="btn">TẮT</button>
+  </div>
+  <div class="status" id="status">Trạng thái: ESP đang tắt</div>
+</div>
+<script>
+const btn=document.getElementById("btn");
+const status=document.getElementById("status");
+let on=false;
+btn.onclick=()=>{
+  on=!on;
+  btn.textContent=on?"BẬT":"TẮT";
+  btn.classList.toggle("on",on);
+  status.textContent=on?"Trạng thái: ESP đang bật":"Trạng thái: ESP đang tắt";
+};
+</script>
+</body>
+</html>"""
+
+path = Path("/mnt/data/esp_toggle.html")
+path.write_text(html, encoding="utf-8")
+print(f"[Tải file ESP Toggle](sandbox:{path})")
+from pathlib import Path
+
+html = """<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESP Toggle</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#111;color:#fff;display:flex;justify-content:center;align-items:center;min-height:100vh}
+.box{width:min(90%,360px);background:#1d1d1d;border:1px solid #333;border-radius:18px;padding:24px;box-sizing:border-box}
+.row{display:flex;align-items:center;justify-content:space-between;gap:20px}
+h2{margin:0 0 6px;font-size:22px}
+p{margin:0;color:#aaa;font-size:14px}
+button{border:0;border-radius:12px;padding:13px 20px;font-weight:bold;font-size:15px;cursor:pointer;background:#333;color:#fff}
+button.on{background:#18a558}
+.status{margin-top:18px;background:#151515;border-radius:10px;padding:12px;color:#aaa;text-align:center}
+</style>
+</head>
+<body>
+<div class="box">
+  <div class="row">
+    <div>
+      <h2>ESP</h2>
+      <p>Công tắc Vương Hào AimBot.</p>
+    </div>
+    <button id="btn">TẮT</button>
+  </div>
+  <div class="status" id="status">Trạng thái: ESP đang tắt</div>
+</div>
+<script>
+const btn=document.getElementById("btn");
+const status=document.getElementById("status");
+let on=false;
+btn.onclick=()=>{
+  on=!on;
+  btn.textContent=on?"BẬT":"TẮT";
+  btn.classList.toggle("on",on);
+  status.textContent=on?"Trạng thái: ESP đang bật":"Trạng thái: ESP đang tắt";
+};
+</script>
+</body>
+</html>"""
+
+path = Path("/mnt/data/esp_toggle.html")
+path.write_text(html, encoding="utf-8")
+print(f"[Tải file ESP Toggle](sandbox:{path})")
